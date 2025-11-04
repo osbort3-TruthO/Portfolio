@@ -1,6 +1,6 @@
 package com.pluralsight;
 
-public abstract class FixedAsset {
+public abstract class FixedAsset implements Valuable{
 
    private  String name;
     private double marketValue;
@@ -18,5 +18,5 @@ public abstract class FixedAsset {
         return marketValue;
     }
 
-   public abstract double getValue();
+   //public abstract double getValue();
 }
