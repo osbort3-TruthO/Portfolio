@@ -1,13 +1,14 @@
 package com.pluralsight;
 
-public abstract class Account {
+public abstract class  Account implements Valuable {
+
     private String name;
-    private String accountMember;
+    private String accountNumber;
     private double balance;
 
-    public Account(String name, String accountMember, double balance) {
+    public Account(String name, String accountNumber, double balance) {
         this.name = name;
-        this.accountMember = accountMember;
+        this.accountNumber = accountNumber;
         this.balance = balance;
     }
 
@@ -15,12 +16,32 @@ public abstract class Account {
         return name;
     }
 
-    public String getAccountMember() {
-        return accountMember;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public double getBalance() {
         return balance;
     }
-    //public abstract double getValue();
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }
